@@ -3,9 +3,7 @@
     <el-header height="120px">
       <navbar />
     </el-header>
-    <el-main>
-      <Nuxt />
-    </el-main>
+    <Nuxt />
   </el-container>
 </template>
 

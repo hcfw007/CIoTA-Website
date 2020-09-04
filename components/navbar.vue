@@ -1,11 +1,11 @@
 <template>
   <div class="navbar">
     <el-row class="nav-row">
-      <el-col :span="8" :offset="2">
+      <el-col :span="9" :offset="1">
         <img src="@/static/images/logo.png" alt="" class="navbar-img">
         <img src="@/static/images/title.svg" alt="" class="navbar-img">
       </el-col>
-      <el-col :span="10">
+      <el-col :span="11">
         <el-menu :default-active="'1'" mode="horizontal" background-color="transparent" text-color="#fff">
           <el-menu-item index="index">首页</el-menu-item>
           <el-submenu index="intro" :popper-append-to-body="false">
@@ -48,7 +48,7 @@
           <el-menu-item index="contact">联系我们</el-menu-item>
         </el-menu>
       </el-col>
-      <el-col :span="4" style="height: 100%">
+      <el-col :span="3" style="height: 100%">
         <div class="user">登录</div>
         <div class="user">注册</div>
       </el-col>

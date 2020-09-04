@@ -1,54 +1,34 @@
 <template>
-  <div class="container">
-    <div>
-      <h1 class="title">
-        CIoTA-Website
-      </h1>
-    </div>
-  </div>
+  <el-main>
+    <el-row class="banner-row">
+      <el-col :span="24" class="banner-container">
+        <img src="@/static/images/index/big-banner.png" alt="" class="big-banner">
+        <h1 class="banner-title">物联网产业技术创新战略联盟官网<br>全新上线</h1>
+      </el-col>
+    </el-row>
+  </el-main>
 </template>
 
 <script>
 export default {}
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+<style lang="stylus">
+.banner-container
+  position: relative
 
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
+  .big-banner
+    width: 100%
+    height: 400px
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
+  .banner-title
+    position: absolute
+    top: 15%
+    width: 100%
+    text-align: center
+    font-size: 48px
+    color: #fff
+    line-height: 100px
+    letter-spacing: 26px
 
-.links {
-  padding-top: 15px;
-}
 </style>

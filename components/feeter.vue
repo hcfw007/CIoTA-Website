@@ -1,7 +1,7 @@
 <template>
   <div class="footer-container">
     <el-row>
-      <el-col :span="13" :offset="1">
+      <el-col :span="15" :offset="1">
         <div class="menu-container">
           <div v-for="menu in menuStructure" :key="menu.name" class="menu-col">
             <div class="menu-title">
@@ -24,6 +24,19 @@
           </div>
         </div>
       </el-col>
+      <el-col :span="7">
+        <div class="logo-container">
+          <img src="@/static/images/logo.png" alt="" class="footer-logo-img">
+          <img src="@/static/images/title.svg" alt="" class="footer-logo-img">
+        </div>
+      </el-col>
+    </el-row>
+    <el-row>
+      <el-col :span="22" :offset="1" class="copyright-col">
+        <div class="copyright">
+          版权号
+        </div>
+      </el-col>
     </el-row>
   </div>
 </template>
@@ -44,6 +57,22 @@ export default {
 .footer-container
   color: #fff
   background-color: rgb(37, 55, 72)
+  height: 260px
+
+  .copyright-col
+    .copyright
+      font-size: 14px
+      color: rgba(215, 215, 215, 0.749019607843137)
+      text-align: left
+      float: right
+      width: 140px
+
+  .logo-container
+    text-align: right
+    margin-top: 120px
+
+    .footer-logo-img
+      height: 30px
 
   .menu-container
     margin: 30px 0

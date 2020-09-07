@@ -84,18 +84,18 @@ navbarHeight = 60px // height of navbar content
 
   .user, .el-menu-item, >>>.el-submenu__title
     color: #fff
-    font-size: 20px
+    font-size: 16px
 
     &:hover
       color: rgb(24, 144, 244) !important
       background-color: transparent !important
 
-  submenuWidth = 130px
+  submenuWidth = 110px
   >>>ul.el-menu--popup.el-menu
     min-width: submenuWidth
 
     .el-menu-item
-      font-size: 16px
+      font-size: 14px
       text-align: center
       min-width: submenuWidth
 

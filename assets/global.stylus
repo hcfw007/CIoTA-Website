@@ -3,5 +3,6 @@ body
   margin: 0
 
 .frame-container
-  width: 1800px
+  min-width: 1200px
+  width: 80%
   margin: 0 auto

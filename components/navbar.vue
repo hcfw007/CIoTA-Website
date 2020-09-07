@@ -8,7 +8,13 @@
       <el-col :span="11">
         <el-menu :default-active="'1'" mode="horizontal" background-color="transparent" text-color="#fff">
           <el-menu-item index="index">首页</el-menu-item>
-          <el-submenu index="intro" :popper-append-to-body="false">
+          <el-submenu v-for="menu in menuStructure" :key="menu.index" :index="menu.name" :popper-append-to-body="false">
+            <template slot="title">{{ menu.title }}</template>
+            <el-menu-item v-for="child in menu.children" :key="child.index" :index="child.name">
+              {{ child.title }}
+            </el-menu-item>
+          </el-submenu>
+          <!-- <el-submenu index="intro" :popper-append-to-body="false">
             <template slot="title">联盟介绍</template>
             <el-menu-item index="alliance-intro">
               联盟简介
@@ -44,7 +50,7 @@
             <el-menu-item index="how-to-join">
               注册指引
             </el-menu-item>
-          </el-submenu>
+          </el-submenu> -->
           <el-menu-item index="contact">联系我们</el-menu-item>
         </el-menu>
       </el-col>
@@ -55,6 +61,18 @@
     </el-row>
   </div>
 </template>
+
+<script>
+import { menuStructure } from '@/assets/website-config'
+
+export default {
+  data() {
+    return {
+      menuStructure: menuStructure.children.filter(ele => ele.children)
+    }
+  }
+}
+</script>
 
 <style lang="stylus" scoped>
 navbarHeight = 60px // height of navbar content
@@ -85,12 +103,13 @@ navbarHeight = 60px // height of navbar content
   .user, .el-menu-item, >>>.el-submenu__title
     color: #fff
     font-size: 16px
+    padding: 0 10px
 
     &:hover
       color: rgb(24, 144, 244) !important
       background-color: transparent !important
 
-  submenuWidth = 110px
+  submenuWidth = 85px
   >>>ul.el-menu--popup.el-menu
     min-width: submenuWidth
 

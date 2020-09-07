@@ -1,5 +1,5 @@
 <template>
-  <el-main>
+  <div>
     <el-row class="banner-row">
       <el-col :span="24" class="banner-container">
         <img src="@/static/images/index/big-banner.png" alt="" class="big-banner">
@@ -7,9 +7,21 @@
       </el-col>
     </el-row>
     <el-row class="block-row">
+      <h3 class="block-title">最新资讯</h3>
+    </el-row>
+    <el-row class="block-row">
       <h3 class="block-title">联盟介绍</h3>
     </el-row>
-  </el-main>
+    <el-row class="block-row">
+      <h3 class="block-title">联盟动态</h3>
+    </el-row>
+    <el-row class="block-row">
+      <h3 class="block-title">物联大会</h3>
+    </el-row>
+    <el-row class="block-row">
+      <h3 class="block-title">联盟成员</h3>
+    </el-row>
+  </div>
 </template>
 
 <script>
@@ -40,11 +52,11 @@ export default {}
     width: 100%
     text-align: center
 
-  &:nth-child(even)
+  &:nth-child(odd)
     background-color: rgb(42, 60, 76)
     color: #fff
 
-  &:nth-child()
+  &:nth-child(even)
     background-color: #fff
     color: rgb(51, 51, 51)
 </style>

@@ -8,6 +8,11 @@
     </el-row>
     <el-row class="block-row">
       <h3 class="block-title">最新资讯</h3>
+      <swiper v-if="lattest.length > 0" ref="lattestSwiper" class="latest-swiper" :options="latestSwiperOptions">
+        <swiper-slide v-for="(news, index) in lattest" :key="'lattest-' + index">
+          <news-slide-block :title="news.title" :content="news.content" :img-src="news.imgSrc" />
+        </swiper-slide>
+      </swiper>
     </el-row>
     <el-row class="block-row">
       <h3 class="block-title">联盟介绍</h3>
@@ -25,7 +30,28 @@
 </template>
 
 <script>
-export default {}
+import { lattestGetter } from '@/assets/getters'
+
+export default {
+  data() {
+    return {
+      latestSwiperOptions: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false
+        }
+      },
+      lattest: []
+    }
+  },
+  mounted() {
+    this.lattest = lattestGetter()
+  }
+}
 </script>
 
 <style lang="stylus">
@@ -58,5 +84,5 @@ export default {}
 
   &:nth-child(even)
     background-color: #fff
-    color: rgb(51, 51, 51)
+    color: #333
 </style>

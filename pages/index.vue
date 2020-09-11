@@ -22,7 +22,7 @@
           <img src="@/static/images/title.svg" alt="" class="intro-block-img">
         </div>
         <p><span class="dark-blue">中国物联网产业技术创新战略联盟</span>中国物联网产业技术创新战略联盟由物联网部际联席会议的14部委推荐的40家单位发起，于2013年10月24日成立，中国电子科技集团公司任理事长单位。</p>
-        <el-button type="primary">主要按钮</el-button>
+        <el-button type="primary">更多</el-button>
       </el-col>
       <el-col :span="12" class="content-block">
         <p>2013年10月24日，“物联网产业技术创新战略联盟”成立大会在京成功召开，科技部曹健林副部长出席会议并讲话，国家发展改革委、工信部等物联网发展部际联席会议14个部委作为联盟指导单位参会，来自40家联盟发起单位的代表参加了会议。</p>

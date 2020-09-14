@@ -9,3 +9,6 @@ body
 
 .dark-blue
   color: rgba(24, 144, 255, 0.796078431372549)
+
+.side-bar
+  padding: 20px

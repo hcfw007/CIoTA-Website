@@ -8,11 +8,13 @@
     </el-row>
     <el-row class="block-row">
       <h3 class="block-title">最新资讯</h3>
-      <swiper ref="lattestSwiper" class="latest-swiper" :options="latestSwiperOptions">
-        <swiper-slide v-for="(news, index) in lattest" :key="'lattest-' + index">
-          <news-slide-block :title="news.title" :content="news.content" :img-src="news.imgSrc" />
-        </swiper-slide>
-      </swiper>
+      <el-col class="content-block">
+        <swiper ref="lattestSwiper" class="latest-swiper" :options="latestSwiperOptions">
+          <swiper-slide v-for="(news, index) in lattest" :key="'lattest-' + index">
+            <news-slide-block :title="news.title" :content="news.content" :img-src="news.imgSrc" />
+          </swiper-slide>
+        </swiper>
+      </el-col>
     </el-row>
     <el-row class="block-row">
       <h3 class="block-title">联盟介绍</h3>
@@ -51,6 +53,24 @@
     </el-row>
     <el-row class="block-row">
       <h3 class="block-title">物联大会</h3>
+      <el-col :span="6" class="content-block coferences-row-content">
+        <h5 class="coferences-title">全球物联网大会</h5>
+        <p> “全球物联网大会及创新成果点映”暨首届全球物联网大会于2017年12月在北京中关村软件园国际会议中心开幕，来自德国、英国等国家和地区的物联网领域专家及企业到场分享全球范围内物联网发展近况及最新技术信息。</p>
+        <el-button type="primary">更多</el-button>
+      </el-col>
+      <el-col :span="18" class="content-block" style="text-align: center">
+        <swiper ref="coferencesSwiper" class="coferences-swiper" :options="coferencesSwiperOptions">
+          <swiper-slide>
+            <img src="@/static/images/index/coferences-1.svg" alt="" class="coferences-img">
+          </swiper-slide>
+          <swiper-slide>
+            <img src="@/static/images/index/coferences-2.svg" alt="" class="coferences-img">
+          </swiper-slide>
+          <swiper-slide>
+            <img src="@/static/images/index/coferences-3.svg" alt="" class="coferences-img">
+          </swiper-slide>
+        </swiper>
+      </el-col>
     </el-row>
     <el-row class="block-row">
       <h3 class="block-title">联盟成员</h3>
@@ -59,7 +79,7 @@
 </template>
 
 <script>
-import { lattestGetter } from '@/assets/getters'
+import { lattestGetter, memberGetter } from '@/assets/getters'
 
 export default {
   data() {
@@ -74,11 +94,20 @@ export default {
           disableOnInteraction: false
         }
       },
+      coferencesSwiperOptions: {
+        spaceBetween: 30,
+        effect: 'fade',
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false
+        }
+      },
       lattest: []
     }
   },
   mounted() {
     this.lattest = lattestGetter()
+    this.member = memberGetter()
   }
 }
 </script>
@@ -168,6 +197,15 @@ export default {
     height: 100%
     max-height: 330px
     width: 100%
+
+  .coferences-title
+    color: #fff
+    font-size: 18px
+    font-weight: 700
+
+  .coferences-row-content
+    color: rgba(215, 215, 215, 0.752941176470588)
+    font-size: 14px
 
 p
   text-indent: 2em

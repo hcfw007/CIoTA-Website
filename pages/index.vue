@@ -9,8 +9,8 @@
     <el-row class="block-row">
       <h3 class="block-title">最新资讯</h3>
       <el-col class="content-block">
-        <swiper ref="lattestSwiper" class="latest-swiper" :options="latestSwiperOptions">
-          <swiper-slide v-for="(news, index) in lattest" :key="'lattest-' + index">
+        <swiper ref="latestSwiper" class="latest-swiper" :options="latestSwiperOptions">
+          <swiper-slide v-for="(news, index) in latest" :key="'latest-' + index">
             <news-slide-block :title="news.title" :content="news.content" :img-src="news.imgSrc" />
           </swiper-slide>
         </swiper>
@@ -86,7 +86,7 @@
 </template>
 
 <script>
-import { lattestGetter, memberGetter } from '@/assets/getters'
+import { latestGetter, memberGetter } from '@/assets/getters'
 
 export default {
   data() {
@@ -119,12 +119,12 @@ export default {
           disableOnInteraction: false
         }
       },
-      lattest: [],
+      latest: [],
       member: []
     }
   },
   mounted() {
-    this.lattest = lattestGetter()
+    this.latest = latestGetter()
     this.member = memberGetter()
   }
 }

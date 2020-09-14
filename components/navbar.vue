@@ -82,7 +82,7 @@ navbarHeight = 60px // height of navbar content
   background-image: linear-gradient(rgb(0, 21, 41), rgb(55,64,89))
   border: solid 1px rgba(50, 53, 95, 1)
   box-shadow: 0px -5px 30px 0px rgb(37, 40, 75) inset
-  height: (navbarHeight + 200px)
+  height: (navbarHeight + 200px - 2px) // - 2 for border width
 
   .navbar-img
     height: navbarHeight

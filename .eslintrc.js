@@ -16,6 +16,7 @@ module.exports = {
   // add your custom rules here
   rules: {
     'vue/singleline-html-element-content-newline': 0,
-    'space-before-function-paren': 0
+    'space-before-function-paren': 0,
+    'prefer-const': 0
   }
 }

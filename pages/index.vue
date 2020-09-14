@@ -74,6 +74,13 @@
     </el-row>
     <el-row class="block-row">
       <h3 class="block-title">联盟成员</h3>
+      <el-col :span="24" class="content-block">
+        <swiper ref="memberSwiper" class="member-swiper" :options="memberSwiperOptions">
+          <swiper-slide v-for="(orgnization, index) in member" :key="'member-' + index">
+            <img :src="orgnization.imgSrc" class="member-img" :alt="orgnization.title" :title="orgnization.title">
+          </swiper-slide>
+        </swiper>
+      </el-col>
     </el-row>
   </div>
 </template>
@@ -102,7 +109,18 @@ export default {
           disableOnInteraction: false
         }
       },
-      lattest: []
+      memberSwiperOptions: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false
+        }
+      },
+      lattest: [],
+      member: []
     }
   },
   mounted() {
@@ -206,6 +224,10 @@ export default {
   .coferences-row-content
     color: rgba(215, 215, 215, 0.752941176470588)
     font-size: 14px
+
+  .member-img
+    width: 100%
+    height: 160px
 
 p
   text-indent: 2em

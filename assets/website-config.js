@@ -6,6 +6,7 @@ const menuStructure = {
     {
       name: 'intro',
       title: '联盟介绍',
+      addr: 'intro',
       children: [
         {
           name: 'alliance-intro',
@@ -24,6 +25,7 @@ const menuStructure = {
     }, {
       name: 'conferences',
       title: '物联大会',
+      addr: 'conferences',
       children: [
         {
           name: 'past-conferences',
@@ -34,6 +36,7 @@ const menuStructure = {
     }, {
       name: 'info',
       title: '资讯中心',
+      addr: 'info',
       children: [
         {
           name: 'latest',
@@ -52,6 +55,7 @@ const menuStructure = {
     }, {
       name: 'members',
       title: '会员中心',
+      addr: 'members',
       children: [
         {
           name: 'member-list',

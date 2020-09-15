@@ -7,7 +7,7 @@
             <div class="menu-title">
               {{ menu.title }}
             </div>
-            <div v-for="child in menu.children" :key="child.name" class="menu-subtitle">
+            <div v-for="child in menu.children" :key="child.name" class="menu-subtitle" @click="goto(`/${ menu.addr }/${ child.addr}`)">
               {{ child.title }}
             </div>
             <div v-if="menu.name === 'contact'" class="contact">
@@ -48,6 +48,11 @@ export default {
   data() {
     return {
       menuStructure: menuStructure.children
+    }
+  },
+  methods: {
+    goto(url) {
+      this.$router.push(url)
     }
   }
 }

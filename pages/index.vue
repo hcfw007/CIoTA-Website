@@ -123,7 +123,7 @@ export default {
       member: []
     }
   },
-  mounted() {
+  created() {
     this.latest = latestGetter()
     this.member = memberGetter()
   }

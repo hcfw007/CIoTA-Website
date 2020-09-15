@@ -57,7 +57,6 @@ export default {
 
 .article-content
   font-size: 14px
-  text-indent: 2em
   color: #333
   line-height: 20px
   letter-spacing: 0.8px
@@ -71,4 +70,5 @@ export default {
   p
     text-align: left
     margin: 0 5px
+    text-indent: 2em
 </style>

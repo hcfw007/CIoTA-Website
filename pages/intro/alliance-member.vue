@@ -12,7 +12,7 @@
 import { allMemberGetter } from '@/assets/getters'
 
 export default {
-  layout: 'article',
+  layout: 'title-aside',
   data() {
     return {
       members: []

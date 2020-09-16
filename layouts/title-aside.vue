@@ -8,7 +8,7 @@
         <div class="side-title">联盟简介</div>
       </el-aside>
       <el-main>
-        <Nuxt class="article-content" />
+        <Nuxt class="main-content" />
       </el-main>
     </el-container>
     <el-footer>
@@ -55,7 +55,7 @@ export default {
     height: 90px
     border-right: solid 5px rgb(69, 166, 255)
 
-.article-content
+.main-content
   font-size: 14px
   color: #333
   line-height: 20px

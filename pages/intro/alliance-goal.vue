@@ -9,6 +9,6 @@
 
 <script>
 export default {
-  layout: 'article'
+  layout: 'title-aside'
 }
 </script>

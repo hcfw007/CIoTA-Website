@@ -5,7 +5,7 @@
     </el-header>
     <el-container>
       <el-aside class="side-bar">
-        <div class="side-title">联盟简介</div>
+        <div class="side-title">{{ title }}</div>
       </el-aside>
       <el-main>
         <Nuxt class="main-content" />
@@ -26,19 +26,27 @@ export default {
       title: '页面标题'
     }
   },
+  watch: {
+    $route: 'updateTitle'
+  },
   beforeMount() {
-    let tree = menuStructure
-    let paths = this.$route.path.split('/')
-    let p = 1
-    while (p < paths.length) {
-      for (let item of tree.children) {
-        if (item.name === paths[p]) {
-          p += 1
-          tree = item
+    this.updateTitle()
+  },
+  methods: {
+    updateTitle() {
+      let tree = menuStructure
+      let paths = this.$route.path.split('/')
+      let p = 1
+      while (p < paths.length) {
+        for (let item of tree.children) {
+          if (item.name === paths[p]) {
+            p += 1
+            tree = item
+          }
         }
       }
+      this.title = tree.title
     }
-    this.title = tree.title
   }
 }
 </script>

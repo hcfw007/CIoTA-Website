@@ -68,10 +68,11 @@ navbarHeight = 60px // height of navbar content
     margin-left: 30px
     cursor: pointer
 
-  .user, .el-menu-item, >>>.el-submenu__title
-    color: #fff
+  .user, .el-menu-item, .el-submenu >>>.el-submenu__title
+    color: #fff !important
     font-size: 16px
     padding: 0 10px
+    border: none
 
     &:hover
       color: rgb(24, 144, 244) !important

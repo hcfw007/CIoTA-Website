@@ -74,6 +74,10 @@ export default {
   img
     max-width: 600px
     max-height: 400px
+    margin: 15px 0
+
+  h3
+    font-size: 20px
 
   p
     text-align: left

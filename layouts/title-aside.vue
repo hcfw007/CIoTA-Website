@@ -5,7 +5,7 @@
     </el-header>
     <el-container>
       <el-aside class="side-bar">
-        <div class="side-title">{{ title }}</div>
+        <div class="side-title" @click="goto(link)">{{ title }}</div>
       </el-aside>
       <el-main>
         <Nuxt class="main-content" />
@@ -23,7 +23,8 @@ import { menuStructure } from '@/assets/website-config'
 export default {
   data() {
     return {
-      title: '页面标题'
+      title: '页面标题',
+      link: '/'
     }
   },
   watch: {
@@ -37,15 +38,23 @@ export default {
       let tree = menuStructure
       let paths = this.$route.path.split('/')
       let p = 1
-      while (p < paths.length && p < 2) {
+      let link = ''
+      while (p < paths.length && tree.children) {
         for (let item of tree.children) {
           if (item.name === paths[p]) {
             p += 1
             tree = item
+            if (p <= 3) {
+              link += `/${ tree.name }`
+            }
           }
         }
       }
       this.title = tree.title
+      this.link = link
+    },
+    goto(url) {
+      this.$router.push(url)
     }
   }
 }
@@ -62,6 +71,7 @@ export default {
     padding-right: 15px
     height: 90px
     border-right: solid 5px rgb(69, 166, 255)
+    cursor: pointer
 
 .main-content
   font-size: 14px

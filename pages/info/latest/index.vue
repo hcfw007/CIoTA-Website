@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-col :span="24" class="block-news-list">
-      <div v-for="(latest, index) in latestList" :key="'latest' + index" class="block-news">
+      <div v-for="(latest, index) in latestList" :key="'latest' + index" class="block-news" @click="goto(`/info/latest/detail?id=${ latest.id }`)">
         <img :src="latest.imgSrc" alt="">
         <div class="words-in-pic">{{ latest.title }}</div>
         <div class="block-news-title">{{ latest.title }}</div>
@@ -23,6 +23,11 @@ export default {
   },
   created() {
     this.latestList = latestGetter()
+  },
+  methods: {
+    goto(url) {
+      this.$router.push(url)
+    }
   }
 }
 </script>

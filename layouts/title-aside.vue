@@ -37,7 +37,7 @@ export default {
       let tree = menuStructure
       let paths = this.$route.path.split('/')
       let p = 1
-      while (p < paths.length) {
+      while (p < paths.length && p < 2) {
         for (let item of tree.children) {
           if (item.name === paths[p]) {
             p += 1

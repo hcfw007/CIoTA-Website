@@ -1,0 +1,38 @@
+.block-news-list
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  padding: 20px
+
+  .block-news
+    width: 40%
+    height: 400px
+    position: relative
+
+    img
+      max-width: 100%
+      height: 280px
+
+    .words-in-pic
+      position: absolute
+      color: #fff
+      font-size: 14px
+      top: 130px
+      text-align: center
+      width: 100%
+
+    .block-news-title
+      text-align: left
+      color: #333
+      font-size: 18px
+      font-weight: 700
+      margin: 10px 0
+
+    .block-news-content
+      color: #333
+      font-size: 12px
+      overflow: hidden
+      text-overflow: ellipsis
+      display: -webkit-box
+      -webkit-line-clamp: 2
+      -webkit-box-orient: vertical

@@ -29,7 +29,7 @@
       font-weight: 700
       margin: 10px 0
 
-    .block-news-content
+    .block-news-abstract
       color: #333
       font-size: 12px
       overflow: hidden

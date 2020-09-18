@@ -11,7 +11,7 @@
       <el-col class="content-block">
         <swiper ref="latestSwiper" class="latest-swiper" :options="latestSwiperOptions">
           <swiper-slide v-for="(news, index) in latest" :key="'latest-' + index">
-            <news-slide-block :title="news.title" :content="news.content" :img-src="news.imgSrc" />
+            <news-slide-block :title="news.title" :content="news.abstract" :img-src="news.imgSrc" />
           </swiper-slide>
         </swiper>
       </el-col>

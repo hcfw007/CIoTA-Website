@@ -5,7 +5,7 @@
         <img :src="latest.imgSrc" alt="">
         <div class="words-in-pic">{{ latest.title }}</div>
         <div class="block-news-title">{{ latest.title }}</div>
-        <div class="block-news-content">{{ latest.content }}</div>
+        <div class="block-news-abstract">{{ latest.abstract }}</div>
       </div>
     </el-col>
   </div>

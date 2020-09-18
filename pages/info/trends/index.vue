@@ -1,9 +1,9 @@
 <template>
   <div>
     <el-col :span="24" class="row-news-list">
-      <div v-for="(trend, index) in trendsList" :key="'trend' + index" class="row-news" @click="goto(`/info/trends/detail?id=${ trend.id }`)">
-        <div class="row-news-title">{{ trend.title }}</div>
-        <div class="row-news-abstract">{{ trend.abstract }}</div>
+      <div v-for="(trends, index) in trendsList" :key="'trends' + index" class="row-news" @click="goto(`/info/trends/detail?id=${ trends.id }`)">
+        <div class="row-news-title">{{ trends.title }}</div>
+        <div class="row-news-abstract">{{ trends.abstract }}</div>
       </div>
     </el-col>
   </div>

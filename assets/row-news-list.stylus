@@ -1,0 +1,27 @@
+.row-news-list
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  padding: 20px
+
+  .row-news
+    width: 100%
+    height: 80px
+    position: relative
+    cursor: pointer
+    text-align: left
+
+    .row-news-title
+      color: #333
+      font-size: 22px
+      font-weight: 700
+      margin: 10px 0
+
+    .row-news-abstract
+      color: #333
+      font-size: 14px
+      overflow: hidden
+      text-overflow: ellipsis
+      display: -webkit-box
+      -webkit-line-clamp: 1
+      -webkit-box-orient: vertical

@@ -18,8 +18,8 @@
         </el-menu>
       </el-col>
       <el-col :span="3" style="height: 100%">
-        <div class="user">登录</div>
-        <div class="user">注册</div>
+        <div class="user" @click="goto('/user/login')">登录</div>
+        <div class="user" @click="goto('/user/register')">注册</div>
       </el-col>
     </el-row>
   </div>

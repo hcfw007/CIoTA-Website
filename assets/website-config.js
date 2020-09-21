@@ -71,6 +71,21 @@ const menuStructure = {
       name: 'contact',
       title: '联系我们',
       addr: 'contact'
+    }, {
+      name: 'user',
+      addr: 'user',
+      hide: true,
+      children: [
+        {
+          name: 'login',
+          title: '会员登录',
+          addr: 'login'
+        }, {
+          name: 'register',
+          title: '会员注册',
+          addr: 'register'
+        }
+      ]
     }
   ]
 }

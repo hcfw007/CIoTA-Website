@@ -47,7 +47,7 @@ import { menuStructure } from '@/assets/website-config'
 export default {
   data() {
     return {
-      menuStructure: menuStructure.children
+      menuStructure: menuStructure.children.filter(ele => !ele.hide)
     }
   },
   methods: {
